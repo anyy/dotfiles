@@ -1,0 +1,20 @@
+  {
+  "suggest.noselect":false,
+  "diagnostic.enable": false,
+  "suggest.preferCompleteThanJumpPlaceholder":true,
+  "languageserver":{
+    "golang":{
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "diagnosticsEnabled": true
+      }
+    },
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
+    }
+  }
+}

@@ -1,0 +1,329 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# Golang
+[[plugins]]
+repo = 'fatih/vim-go'
+hook_add = '''
+  let g:go_highlight_types = 1
+  let g:go_highlight_fields = 1
+  let g:go_highlight_functions = 1
+  let g:go_highlight_extra_types = 1
+  let g:go_highlight_function_calls = 1
+  let g:go_highlight_function_parameters = 1
+  let g:go_highlight_variable_declarations = 1
+  let g:go_highlight_build_constraints = 1
+  let g:go_highlight_variable_assignments = 1
+  let g:go_highlight_array_whitespace_error = 1
+  let g:go_highlight_chan_whitespace_error = 1
+  let g:go_highlight_space_tab_error = 1
+  let g:go_highlight_trailing_whitespace_error = 1
+  let g:go_highlight_methods = 1
+  let g:go_highlight_structs = 1
+
+  let g:go_fmt_command = "goimports"
+
+  let g:go_metalinter_autosave = 1
+  let g:go_metalinter_autosave_enabled = ['vet']
+
+  let g:go_def_mapping_enabled = 0
+  let g:go_gocode_unimported_packages = 1
+
+  let g:go_gocode_completion_enabled = 0
+
+  let g:go_def_mode = 'gopls'
+  let g:go_info_mode = 'gopls'
+
+  au FileType go nmap <leader>s <Plug>(go-def-split)
+  au FileType go nmap <leader>v <Plug>(go-def-vertical)
+  au FileType go nmap <leader>rf :GoReferrers<CR>
+  au FileType go nmap <leader>lc :GoCallers<CR>
+  au FileType go nmap <silent> <leader>im :GoImplements<CR>
+  au FileType go nmap <silent> <leader>at :GoAddTags<CR>
+  au FileType go nmap <silent> <leader>fs :GoFillStruct<CR>
+
+  au FileType go nmap <leader>9 :GoDebugBreakpoint<CR>
+  au FileType go nmap <leader>1 :GoDebugNext<CR>
+  au FileType go nmap <leader>2 :GoDebugStep<CR>
+  au FileType go nmap <leader>3 :GoDebugStepOut<CR>
+  au FileType go nmap <leader>dc :GoDebugContinue<CR>
+  au FileType go nmap <leader>ds :GoDebugStop<CR>
+
+  let g:go_debug_windows = {
+        \ 'stack': 'leftabove 20vnew',
+        \ 'out':   'botright 10new',
+        \ 'vars':  'leftabove 30vnew',
+  \ }
+'''
+
+# Directory tree
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  let g:NERDTreeDirArrows = 1
+  let NERDTreeWinSize=45
+  let g:NERDTreeLimitedSyntax = 1
+'''
+[[plugins]]
+repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
+hook_add = '''
+  let s:rspec_red = 'FE405F'
+  let s:git_orange = 'F54D27'
+'''
+
+# Color scheme
+[[plugins]]
+repo = 'joshdick/onedark.vim'
+[[plugins]]
+repo = 'dracula/vim'
+[[plugins]]
+repo = 'tyrannicaltoucan/vim-quantum'
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+[[plugins]]
+repo = 'chriskempson/vim-tomorrow-theme'
+[[plugins]]
+repo = 'challenger-deep-theme/vim'
+[[plugins]]
+repo = 'rakr/vim-one'
+[[plugins]]
+repo = 'arcticicestudio/nord-vim'
+[[plugins]]
+repo = 'KeitaNakamura/neodark.vim'
+
+# Airline
+[[plugins]]
+repo    = 'vim-airline/vim-airline'
+depends = ['vim-airline-themes']
+hook_add = '''
+  let g:airline_powerline_fonts = 1
+  let g:airline_theme='violet'
+
+  set laststatus=2
+
+  let g:airline#extensions#branch#enabled = 1
+
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#fnamemod = ':t'
+  let g:airline#extensions#tabline#buffer_nr_show = 1
+  let g:airline#extensions#wordcount#enabled = 0
+  let g:airline#extensions#default#layout = [['a', 'b', 'c'], ['x', 'y', 'z']]
+  let g:airline_section_c = '%t'
+  let g:airline_section_x = '%{&filetype}'
+  let g:airline_section_z = '%3l:%2v %{airline#extensions#ale#get_warning()} %{airline#extensions#ale#get_error()}'
+  let g:airline#extensions#ale#enabled = 1
+  let g:airline#extensions#ale#error_symbol = ' '
+  let g:airline#extensions#ale#warning_symbol = ' '
+  let g:airline#extensions#default#section_truncate_width = {}
+
+  let g:airline#extensions#whitespace#enabled = 1
+
+  nmap <Left> :bp<CR>
+  nmap <Right> :bn<CR>
+'''
+
+# Window
+[[plugins]]
+repo    = 'kana/vim-submode'
+hook_add = '''
+  call submode#enter_with('bufmove', 'n', '', 's>', '<C-w>>')
+  call submode#enter_with('bufmove', 'n', '', 's<', '<C-w><')
+  call submode#enter_with('bufmove', 'n', '', 's+', '<C-w>+')
+  call submode#enter_with('bufmove', 'n', '', 's-', '<C-w>-')
+  call submode#map('bufmove', 'n', '', '>', '<C-w>>')
+  call submode#map('bufmove', 'n', '', '<', '<C-w><')
+  call submode#map('bufmove', 'n', '', '+', '<C-w>+')
+  call submode#map('bufmove', 'n', '', '-', '<C-w>-')
+'''
+
+# Completion
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+if = '''executable('node') && executable('yarn')'''
+build = './install.sh nightly'
+merged = '0'
+hook_add = '''
+  function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~ '\s'
+  endfunction
+  inoremap <silent><expr> <TAB>
+        \ pumvisible() ? "\<C-n>" :
+        \ <SID>check_back_space() ? "\<TAB>" :
+        \ coc#refresh()
+  inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+  inoremap <silent><expr> <c-space> coc#refresh()
+  
+  autocmd CursorHold * silent call CocActionAsync('highlight')
+  
+  autocmd FileType json syntax match Comment +\/\/.\+$+
+
+  set cmdheight=2
+  set updatetime=300
+  set signcolumn=yes
+
+  nmap gd <Plug>(coc-definition)
+  noremap <C-T> <C-O>
+
+  nmap gy <Plug>(coc-type-definition)
+  nmap gi <Plug>(coc-implementation)
+  nmap gr <Plug>(coc-references)
+
+  nmap <leader>ac <Plug>(coc-codeaction)
+  nmap <leader>qf <Plug>(coc-fix-current)
+  nmap <leader>rn <Plug>(coc-rename)
+'''
+
+#[[plugins]]
+#repo = 'Shougo/deoplete.nvim'
+#on_event = 'InsertEnter'
+#hook_add = '''
+#  let g:deoplete#enable_at_startup = 1
+#'''
+
+#[[plugins]]
+#repo = 'autozimu/LanguageClient-neovim'
+#build = 'bash install.sh'
+#rev = 'next'
+#hook_add = '''
+#  set hidden
+#  let g:LanguageClient_serverCommands = {
+#      \ 'go': ['gopls']
+#      \ }
+#  let g:LanguageClient_loadSettings = 1
+#'''
+#nmap <silent> K :call LanguageClient#textDocument_hover()<CR>
+#nmap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+#noremap <C-]> :call LanguageClient#textDocument_definition()<CR>
+#noremap <C-T> <C-O>
+
+# Git
+[[plugins]]
+repo    = 'airblade/vim-gitgutter'
+hook_add = '''
+  set updatetime=250
+'''
+[[plugins]]
+repo    = 'tpope/vim-fugitive'
+
+# File Seacher
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --bin'
+merged = '0'
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+hook_add = '''
+    nmap <C-p> :GFiles<CR>
+    command! -bang -nargs=* Rg
+      \ call fzf#vim#grep(
+      \   'rg --line-number --no-heading '.shellescape(<q-args>), 0,
+      \   fzf#vim#with_preview({'options': '--exact --reverse --delimiter : --nth 3..'}, 'right:50%:wrap'))
+    nmap <C-o> :Rg<CR>
+'''
+
+# Syntax checking and semantic errors
+[[plugins]]
+repo    = 'w0rp/ale'
+hook_add = '''
+  let g:ale_sign_error = ''
+  let g:ale_sign_warning = ''
+  let g:airline#extensions#ale#open_lnum_symbol = '('
+  let g:airline#extensions#ale#close_lnum_symbol = ')'
+
+  highlight ALEWarning ctermbg=DarkMagenta
+  highlight ALEError ctermbg=DarkMagenta
+
+  let g:ale_echo_msg_error_str = 'E'
+  let g:ale_echo_msg_warning_str = 'W'
+  let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+  let g:ale_lint_on_text_changed = 'never'
+  let g:ale_set_loclist = 0
+  let g:ale_set_quickfix = 0
+  let g:ale_sign_column_always = 1
+  let g:ale_lint_on_enter = 0
+  let g:ale_open_list = 0
+  let g:ale_keep_list_window_open = 0
+  let g:ale_linters = {'go':['govet', 'golint']}
+  let g:ale_go_gometalinter_options = '--fast --enable=staticcheck --enable=gosimple --enable=unused'
+
+
+  let g:ale_fix_on_save  = 1
+  let g:ale_fixers       = {
+    \ 'go': ['goimports'],
+    \ 'yml': ['prettier'],
+  \}
+'''
+
+# Multiple selections
+[[plugins]]
+repo    = 'terryma/vim-multiple-cursors'
+
+# # Comment out
+[[plugins]]
+repo    = 'scrooloose/nerdcommenter'
+hook_add = '''
+  let g:NERDCreateDefaultMappings = 0
+
+  let g:NERDSpaceDelims = 1
+  let g:NERDCompactSexyComs = 1
+  let g:NERDDefaultAlign = 'left'
+  let g:NERDTrimTrailingWhitespace = 1
+  let g:NERDToggleCheckAllLines = 1
+
+  nmap <C-_> <Plug>NERDCommenterToggle
+  vmap <C-_> <Plug>NERDCommenterToggle
+'''
+
+# Add surroundings such as parentheses, brackets, quotes, XML tags, and more
+[[plugins]]
+repo    = 'tpope/vim-surround'
+hook_add = '''
+'''
+
+# Icon
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+hook_add = '''
+  let g:webdevicons_enable = 1
+  let g:webdevicons_enable_nerdtree = 1
+
+  let g:webdevicons_conceal_nerdtree_brackets = 1
+  let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+
+  let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+  let g:DevIconsEnableFoldersOpenClose = 1
+  let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+
+  let g:WebDevIconsUnicodeDecorateFolderNodesDefaultSymbol = ''
+  let g:DevIconsDefaultFolderOpenSymbol = ''
+'''
+
+# Snippet
+[[plugins]]
+repo = 'SirVer/ultisnips'
+
+# Auto close parentheses
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
+# Indent line
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+hook_add = '''
+  let g:indentLine_fileTypeExclude = ['help', 'nerdtree', 'go']
+'''
+
+# Tag
+[[plugins]]
+repo = 'ludovicchabant/vim-gutentags'
+hook_add = '''
+  nmap <C-]> g<C-]>
+'''
+[[plugins]]
+repo = 'universal-ctags/ctags'
