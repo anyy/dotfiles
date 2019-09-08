@@ -316,7 +316,7 @@ repo = 'jiangmiao/auto-pairs'
 [[plugins]]
 repo = 'Yggdroot/indentLine'
 hook_add = '''
-  let g:indentLine_fileTypeExclude = ['help', 'nerdtree', 'go']
+  let g:indentLine_fileTypeExclude = ['help', 'nerdtree', 'go']
 '''
 
 # Tag
