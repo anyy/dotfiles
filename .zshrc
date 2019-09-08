@@ -1,9 +1,5 @@
 source ~/.zplug/init.zsh
 
-# enhancd config
-export ENHANCD_COMMAND=ed
-export ENHANCD_FILTER=ENHANCD_FILTER=fzy:fzf:peco
-
 zplug "yous/vanilli.sh"
 
 zplug "zsh-users/zsh-completions"
@@ -32,20 +28,10 @@ fi
 
 zplug load --verbose
 
-export LIME_DIR_DISPLAY_COMPONENTS=2
-
 if zplug check "zsh-users/zsh-history-substring-search"; then
     bindkey "$terminfo[kcuu1]" history-substring-search-up
     bindkey "$terminfo[kcud1]" history-substring-search-down
 fi
-
-export CLICOLOR=1
-
-# Golang
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-export GOBIN=$GOPATH/bin
-export GO111MODULE=on
 
 # direnv
 eval "$(direnv hook zsh)"
