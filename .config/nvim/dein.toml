@@ -50,9 +50,9 @@ hook_add = '''
   au FileType go nmap <leader>ds :GoDebugStop<CR>
 
   let g:go_debug_windows = {
-        \ 'stack': 'leftabove 20vnew',
-        \ 'out':   'botright 10new',
-        \ 'vars':  'leftabove 30vnew',
+        \ 'stack': 'leftabove 30vnew',
+        \ 'out':   'botright 15new',
+        \ 'vars':  'leftabove 45vnew',
   \ }
 '''
 
@@ -164,9 +164,9 @@ hook_add = '''
   set updatetime=300
   set signcolumn=yes
 
-  nmap gd <Plug>(coc-definition)
   noremap <C-T> <C-O>
 
+  nmap gd <Plug>(coc-definition)
   nmap gy <Plug>(coc-type-definition)
   nmap gi <Plug>(coc-implementation)
   nmap gr <Plug>(coc-references)
