@@ -263,7 +263,7 @@ hook_add = '''
 [[plugins]]
 repo    = 'terryma/vim-multiple-cursors'
 
-# # Comment out
+# Comment out
 [[plugins]]
 repo    = 'scrooloose/nerdcommenter'
 hook_add = '''
