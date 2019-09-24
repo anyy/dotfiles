@@ -330,4 +330,13 @@ repo = 'universal-ctags/ctags'
 # Motion
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
-
+hook_add = '''
+  map <Leader> <Plug>(easymotion-prefix)
+  nmap s <Plug>(easymotion-overwin-f)
+  nmap s <Plug>(easymotion-overwin-f2)
+  
+  let g:EasyMotion_smartcase = 1
+  
+  map <Leader>j <Plug>(easymotion-j)
+  map <Leader>k <Plug>(easymotion-k)
+'''
