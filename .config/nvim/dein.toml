@@ -326,3 +326,8 @@ hook_add = '''
 '''
 [[plugins]]
 repo = 'universal-ctags/ctags'
+
+# Motion
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+
