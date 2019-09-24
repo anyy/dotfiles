@@ -340,3 +340,7 @@ hook_add = '''
   map <Leader>j <Plug>(easymotion-j)
   map <Leader>k <Plug>(easymotion-k)
 '''
+
+# CSV
+[[plugins]]
+repo = 'mechatroner/rainbow_csv'
