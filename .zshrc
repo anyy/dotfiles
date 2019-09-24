@@ -45,3 +45,6 @@ alias cat='bat'
 
 # turn off beep
 setopt no_beep
+
+# ignore a word beginning with '#' as a comment
+setopt INTERACTIVE_COMMENTS
