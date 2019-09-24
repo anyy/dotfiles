@@ -42,3 +42,6 @@ eval "$(direnv hook zsh)"
 
 # alias
 alias cat='bat'
+
+# turn off beep
+setopt no_beep
