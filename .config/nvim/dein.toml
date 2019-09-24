@@ -332,8 +332,8 @@ repo = 'universal-ctags/ctags'
 repo = 'easymotion/vim-easymotion'
 hook_add = '''
   map <Leader> <Plug>(easymotion-prefix)
-  nmap s <Plug>(easymotion-overwin-f)
-  nmap s <Plug>(easymotion-overwin-f2)
+  nmap <Leader>f <Plug>(easymotion-overwin-f)
+  nmap f <Plug>(easymotion-overwin-f2)
   
   let g:EasyMotion_smartcase = 1
   
