@@ -14,4 +14,5 @@ export GO111MODULE=on
 
 export XDG_CONFIG_HOME="$HOME/.config"
 
-export BAT_THEME=ansi-dark
+# bat
+export BAT_THEME="TwoDark"
