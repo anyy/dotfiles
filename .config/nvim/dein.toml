@@ -344,3 +344,16 @@ hook_add = '''
 # CSV
 [[plugins]]
 repo = 'mechatroner/rainbow_csv'
+
+# Markdown
+[[plugins]]
+repo = 'previm/previm'
+hook_add = '''
+  let g:previm_open_cmd = 'open -a "Google Chrome"'
+'''
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+hook_add = '''
+  let g:vim_markdown_folding_disabled = 1
+  let g:vim_markdown_conceal = 0
+'''
