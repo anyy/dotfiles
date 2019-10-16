@@ -19,7 +19,7 @@ ln -s ~/dotfiles/.config/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 ln -s ~/dotfiles/.ctags.d/go.ctags ~/.ctags.d/go.ctags
 ```
 
-KeyRepeats
+KeyRepeats:
 ```sh
 defaults write -g InitialKeyRepeat -int 12
 defaults write -g KeyRepeat -int 1
