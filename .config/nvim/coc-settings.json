@@ -8,7 +8,8 @@
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"],
       "initializationOptions": {
-        "diagnosticsEnabled": true
+        "diagnosticsEnabled": true,
+        "completeUnimported": true
       }
     },
     "dockerfile": {
