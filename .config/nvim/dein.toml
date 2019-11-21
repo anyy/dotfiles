@@ -208,12 +208,14 @@ merged = '0'
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 hook_add = '''
-    nmap <C-p> :GFiles<CR>
+    nmap <C-p> :Files<CR>
+    command! -bang -nargs=? -complete=dir Files
+      \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+    nmap <C-o> :Rg<CR>
     command! -bang -nargs=* Rg
       \ call fzf#vim#grep(
       \   'rg --line-number --no-heading '.shellescape(<q-args>), 0,
       \   fzf#vim#with_preview({'options': '--exact --reverse --delimiter : --nth 3..'}, 'right:50%:wrap'))
-    nmap <C-o> :Rg<CR>
 '''
 
 # Syntax checking and semantic errors
