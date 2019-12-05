@@ -56,6 +56,11 @@ hook_add = '''
   \ }
 '''
 
+# Golang test
+[[plugins]] 
+repo  = 'buoto/gotests-vim'
+
+
 # Directory tree
 [[plugins]]
 repo = 'scrooloose/nerdtree'
@@ -363,7 +368,7 @@ hook_add = '''
 repo  = 'cespare/vim-toml'
 on_ft = 'toml'
 
-# JSON
+# Start screen
 [[plugins]]
 repo  = 'mhinz/vim-startify'
 hook_add = '''
