@@ -21,6 +21,8 @@ brew "ripgrep"
 brew "tig"
 brew "tree"
 brew "zsh"
+brew "plantuml"
+brew "graphviz"
 
 tap "homebrew/cask-fonts"
 cask "font-hack-nerd-font"
