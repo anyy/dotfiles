@@ -369,6 +369,7 @@ on_ft = 'toml'
 [[plugins]]
 repo  = 'mhinz/vim-startify'
 hook_add = '''
+  let g:startify_change_to_dir = 0
   let g:startify_files_number = 5
   function! s:filter_header(lines) abort
       let longest_line   = max(map(copy(a:lines), 'len(v:val)'))
