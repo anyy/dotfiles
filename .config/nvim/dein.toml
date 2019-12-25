@@ -21,8 +21,14 @@ hook_add = '''
   let g:go_highlight_methods = 1
   let g:go_highlight_structs = 1
 
+  let g:go_fmt_autosave = 0
+  let g:go_mod_fmt_autosave = 0
+  let g:go_asmfmt_autosave = 0
   let g:go_metalinter_autosave = 1
-  let g:go_metalinter_autosave_enabled = ['vet']
+  let g:go_metalinter_command='golangci-lint'
+  let g:go_metalinter_autosave_enabled = ['golint', 'typecheck']
+  let g:go_metalinter_enabled = ['typecheck']
+  let g:go_term_close_on_exit = 1
 
   let g:go_def_mapping_enabled = 0
   let g:go_def_mode = 'gopls'
@@ -226,29 +232,30 @@ hook_add = '''
 [[plugins]]
 repo    = 'w0rp/ale'
 hook_add = '''
+  let g:ale_enabled = 0
+
   let g:ale_sign_error = ''
   let g:ale_sign_warning = ''
   let g:airline#extensions#ale#open_lnum_symbol = '('
   let g:airline#extensions#ale#close_lnum_symbol = ')'
-
   highlight ALEWarning ctermbg=DarkMagenta
   highlight ALEError ctermbg=DarkMagenta
-
   let g:ale_echo_msg_error_str = 'E'
   let g:ale_echo_msg_warning_str = 'W'
   let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
+  let g:ale_disable_lsp = 1
   let g:ale_lint_on_text_changed = 'never'
-  let g:ale_set_loclist = 0
-  let g:ale_set_quickfix = 0
   let g:ale_sign_column_always = 1
   let g:ale_lint_on_enter = 0
-  let g:ale_open_list = 0
+  let g:ale_open_list = 1
+  
+  let g:ale_lint_on_insert_leave = 0
+
   let g:ale_keep_list_window_open = 0
-  let g:ale_linters = {'go':['govet', 'golint']}
-  let g:ale_go_gometalinter_options = '--fast --enable=staticcheck --enable=gosimple --enable=unused'
-
-
+  let g:ale_go_golangci_lint_package = 1
+  let g:ale_go_golangci_lint_options = '--disable-all --enable=typecheck,golint'
+  let g:ale_linters = {'go':['golangci-lint']}
   let g:ale_fix_on_save  = 1
   let g:ale_fixers       = {
     \ 'go': ['goimports'],
