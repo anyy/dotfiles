@@ -43,20 +43,19 @@ hook_add = '''
 
   au FileType go nmap <leader>s <Plug>(go-def-split)
   au FileType go nmap <leader>v <Plug>(go-def-vertical)
-  au FileType go nmap <leader>rf :GoReferrers<CR>
-  au FileType go nmap <leader>lc :GoCallers<CR>
-  au FileType go nmap <silent> <leader>im :GoImplements<CR>
-  au FileType go nmap <silent> <leader>at :GoAddTags<CR>
-  au FileType go nmap <silent> <leader>fs :GoFillStruct<CR>
+  au FileType go nmap <leader>rf <Plug>(go-referrers)
+  au FileType go nmap <leader>lc <Plug>(go-callers)
+  au FileType go nmap <silent> <leader>im <Plug>(go-implements)
+  au FileType go nmap <silent> <leader>fs <Plug>GoFillStruct<CR>
 
   au FileType go nmap <leader>tf <Plug>(go-test-func)
 
-  au FileType go nmap <leader>9 :GoDebugBreakpoint<CR>
-  au FileType go nmap <leader>1 :GoDebugNext<CR>
-  au FileType go nmap <leader>2 :GoDebugStep<CR>
-  au FileType go nmap <leader>3 :GoDebugStepOut<CR>
-  au FileType go nmap <leader>dc :GoDebugContinue<CR>
-  au FileType go nmap <leader>ds :GoDebugStop<CR>
+  au FileType go nmap <leader>9 <Plug>(go-debug-breakpoint)
+  au FileType go nmap <leader>1 <Plug>(go-debug-next)
+  au FileType go nmap <leader>2 <Plug>(go-debug-step)
+  au FileType go nmap <leader>3 <Plug>(go-debug-stepout)
+  au FileType go nmap <leader>dc <Plug>(go-debug-continue)
+  au FileType go nmap <leader>ds <Plug>(go-debug-stop)
 
   let g:go_debug_windows = {
         \ 'stack': 'leftabove 30vnew',
