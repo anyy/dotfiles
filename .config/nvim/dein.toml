@@ -49,6 +49,8 @@ hook_add = '''
   au FileType go nmap <silent> <leader>at :GoAddTags<CR>
   au FileType go nmap <silent> <leader>fs :GoFillStruct<CR>
 
+  au FileType go nmap <leader>tf <Plug>(go-test-func)
+
   au FileType go nmap <leader>9 :GoDebugBreakpoint<CR>
   au FileType go nmap <leader>1 :GoDebugNext<CR>
   au FileType go nmap <leader>2 :GoDebugStep<CR>
