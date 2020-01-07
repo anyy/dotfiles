@@ -46,7 +46,8 @@ hook_add = '''
   au FileType go nmap <leader>rf <Plug>(go-referrers)
   au FileType go nmap <leader>lc <Plug>(go-callers)
   au FileType go nmap <silent> <leader>im <Plug>(go-implements)
-  au FileType go nmap <silent> <leader>fs <Plug>GoFillStruct<CR>
+  au FileType go nmap <silent> <leader>fs :GoFillStruct<CR>
+  au FileType go nmap <silent> <leader>de :GoDecls<CR>
 
   au FileType go nmap <leader>tf <Plug>(go-test-func)
 
