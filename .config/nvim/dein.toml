@@ -414,3 +414,7 @@ repo  = 'aklt/plantuml-syntax'
 hook_add = '''
   au FileType plantuml command! OpenUml : !open -a /Applications/Google\ Chrome.app %
 '''
+
+# Profiling
+[[plugins]] 
+repo  = 'dstein64/vim-startuptime'
