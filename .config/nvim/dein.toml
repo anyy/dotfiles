@@ -84,6 +84,8 @@ hook_add = '''
   let s:rspec_red = 'FE405F'
   let s:git_orange = 'F54D27'
 '''
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
 
 # Color scheme
 [[plugins]]
