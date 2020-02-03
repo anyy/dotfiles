@@ -5,3 +5,9 @@ set stage-view  = line-number:yes,interval=1 text
 set log-view    = line-number:yes,interval=1 text
 set blob-view   = line-number:yes,interval=1 text
 set diff-view   = line-number:yes,interval=1 text:yes,commit-title-overflow=no
+
+color diff-header       black magenta
+color diff-chunk        black white
+color cursor            black magenta
+color default           default default
+
