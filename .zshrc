@@ -36,15 +36,13 @@ fi
 # direnv
 eval "$(direnv hook zsh)"
 
-# goenv
-# export PATH="$HOME/.goenv/bin:$PATH"
-# eval "$(goenv init -)"
-
-# alias
-alias cat='bat'
-
 # turn off beep
 setopt no_beep
 
 # ignore a word beginning with '#' as a comment
 setopt INTERACTIVE_COMMENTS
+
+# aliases
+if [ -f ~/dotfiles/.aliases ]; then
+    source ~/dotfiles/.aliases
+fi
