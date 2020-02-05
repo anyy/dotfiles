@@ -1,6 +1,6 @@
 # enhancd config
 export ENHANCD_COMMAND=ed
-export ENHANCD_FILTER=ENHANCD_FILTER=fzy:fzf:peco
+export ENHANCD_FILTER=fzf
 
 export LIME_DIR_DISPLAY_COMPONENTS=2
 
