@@ -6,7 +6,8 @@ zplug "zsh-users/zsh-completions"
 
 zplug 'zsh-users/zsh-autosuggestions'
 
-zplug "yous/lime"
+zplug "mafredri/zsh-async"
+zplug "sindresorhus/pure"
 
 zplug "zsh-users/zsh-syntax-highlighting"
 
