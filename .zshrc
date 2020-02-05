@@ -42,6 +42,9 @@ setopt no_beep
 setopt extended_history
 setopt hist_ignore_dups
 
+# keybinds
+bindkey -e
+
 # ignore a word beginning with '#' as a comment
 setopt INTERACTIVE_COMMENTS
 
