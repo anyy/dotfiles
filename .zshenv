@@ -25,3 +25,7 @@ export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 export HISTFILE=~/.zsh_history
 export HISTSIZE=100000
 export SAVEHIST=100000
+
+# Editor
+export EDITOR="nvim -u $HOME/.config/nvim/init.vim"
+export GIT_EDITOR="${EDITOR}"
