@@ -48,6 +48,7 @@ if dein#check_install()
 endif
 
 syntax on
+set background=dark
 " onedark
 colorscheme onedark
 
@@ -61,7 +62,6 @@ colorscheme onedark
 "colorscheme dracula
 
 " quantum
-" set background=dark
 " colorscheme quantum
 
 " nord-vim
