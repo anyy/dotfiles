@@ -2,8 +2,7 @@
 export ENHANCD_COMMAND=ed
 export ENHANCD_FILTER=fzf
 
-export LIME_DIR_DISPLAY_COMPONENTS=2
-
+# ls color
 export CLICOLOR=1
 
 # Golang
@@ -12,10 +11,11 @@ export PATH=$PATH:$GOPATH/bin
 export GOBIN=$GOPATH/bin
 export GO111MODULE=on
 
+# XDG directories
 export XDG_CONFIG_HOME="$HOME/.config"
 
 # bat
 export BAT_THEME="TwoDark"
 
 # zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=103"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=103"

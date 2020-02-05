@@ -1,17 +1,15 @@
 source ~/.zplug/init.zsh
 
-zplug "yous/vanilli.sh"
-
 zplug "zsh-users/zsh-completions"
 
 zplug 'zsh-users/zsh-autosuggestions'
+
+zplug "zsh-users/zsh-history-substring-search"
 
 zplug "mafredri/zsh-async"
 zplug "sindresorhus/pure"
 
 zplug "zsh-users/zsh-syntax-highlighting"
-
-zplug "zsh-users/zsh-history-substring-search"
 
 zplug "rupa/z", use:"*.sh"
 
