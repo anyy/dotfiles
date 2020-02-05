@@ -39,7 +39,8 @@ eval "$(direnv hook zsh)"
 setopt no_beep
 
 # history
-setopt appendhistory
+setopt extended_history
+setopt hist_ignore_dups
 
 # ignore a word beginning with '#' as a comment
 setopt INTERACTIVE_COMMENTS
