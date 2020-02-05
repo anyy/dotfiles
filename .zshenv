@@ -16,3 +16,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # bat
 export BAT_THEME="TwoDark"
+
+# zsh-autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=103"
