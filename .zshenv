@@ -19,3 +19,9 @@ export BAT_THEME="TwoDark"
 
 # zsh-autosuggestions
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=103"
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# history
+export HISTFILE=~/.zsh_history
+export HISTSIZE=100000
+export SAVEHIST=100000
