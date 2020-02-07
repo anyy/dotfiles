@@ -32,4 +32,5 @@ cask "karabiner-elements"
 cask "sequel-pro"
 cask "slack"
 cask "google-chrome"
+cask "alacritty"
 
