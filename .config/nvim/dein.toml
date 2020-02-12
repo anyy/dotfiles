@@ -422,3 +422,7 @@ hook_add = '''
 # Profiling
 [[plugins]] 
 repo  = 'dstein64/vim-startuptime'
+
+# EditorConfig
+[[plugins]] 
+repo  = 'editorconfig/editorconfig-vim'
