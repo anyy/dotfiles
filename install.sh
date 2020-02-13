@@ -16,6 +16,7 @@ ln -s ~/dotfiles/.curlrc ~/.curlrc
 ln -s ~/dotfiles/.alacritty.yml ~/.alacritty.yml
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/.rgignore ~/.rgignore
+ln -s ~/dotfiles/.editorconfig ~/.editorconfig
 
 # Sets macOS defaults
 source ~/dotfiles/.macos
