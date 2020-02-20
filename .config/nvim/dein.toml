@@ -68,7 +68,7 @@ hook_add = '''
 '''
 
 # Golang test
-[[plugins]] 
+[[plugins]]
 repo  = 'buoto/gotests-vim'
 
 
@@ -164,9 +164,9 @@ merged = '0'
 hook_add = '''
   inoremap <silent><expr> <c-space> coc#refresh()
   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-  
+
   autocmd CursorHold * silent call CocActionAsync('highlight')
-  
+
   autocmd FileType json syntax match Comment +\/\/.\+$+
 
   set cmdheight=2
@@ -259,7 +259,7 @@ hook_add = '''
   let g:ale_sign_column_always = 1
   let g:ale_lint_on_enter = 0
   let g:ale_open_list = 1
-  
+
   let g:ale_lint_on_insert_leave = 0
 
   let g:ale_keep_list_window_open = 0
@@ -351,9 +351,9 @@ hook_add = '''
   map <Leader> <Plug>(easymotion-prefix)
   nmap <Leader>f <Plug>(easymotion-overwin-f)
   nmap f <Plug>(easymotion-overwin-f2)
-  
+
   let g:EasyMotion_smartcase = 1
-  
+
   map <Leader>j <Plug>(easymotion-j)
   map <Leader>k <Plug>(easymotion-k)
 '''
@@ -378,7 +378,7 @@ hook_add = '''
 '''
 
 # Toml
-[[plugins]] 
+[[plugins]]
 repo  = 'cespare/vim-toml'
 on_ft = 'toml'
 
@@ -410,19 +410,19 @@ hook_add = '''
     \ '                       ░  ░   .     ░ ░ ░      ░ ░              .      .  ',
     \ '                              .       ░ ░      ░ ░                        ',
     \ ])
-'''                                                                                
-                                                                                   
+'''
+
 # UML
-[[plugins]] 
+[[plugins]]
 repo  = 'aklt/plantuml-syntax'
 hook_add = '''
-  au FileType plantuml command! OpenUml : !open -a /Applications/Google\ Chrome.app %
+  au FileType plantuml command! OpenUml : !open -a /Applications/Google\ Chrome.app % --args --allow-file-access-from-files
 '''
 
 # Profiling
-[[plugins]] 
+[[plugins]]
 repo  = 'dstein64/vim-startuptime'
 
 # EditorConfig
-[[plugins]] 
+[[plugins]]
 repo  = 'editorconfig/editorconfig-vim'
