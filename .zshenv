@@ -29,3 +29,6 @@ export SAVEHIST=100000
 # Editor
 export EDITOR="nvim -u $HOME/.config/nvim/init.vim"
 export GIT_EDITOR="${EDITOR}"
+
+# LANG
+export LANG=ja_JP.UTF-8
