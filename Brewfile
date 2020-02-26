@@ -23,6 +23,7 @@ brew "tree"
 brew "zsh"
 brew "plantuml"
 brew "graphviz"
+brew "exa"
 
 tap "homebrew/cask-fonts"
 cask "font-hack-nerd-font"
