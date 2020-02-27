@@ -2,6 +2,7 @@
   "suggest.noselect":false,
   "diagnostic.enable": false,
   "suggest.preferCompleteThanJumpPlaceholder":true,
+  "coc.source.around.enable": false,
   "languageserver":{
     "golang":{
       "command": "gopls",
