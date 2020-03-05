@@ -610,3 +610,4 @@ key_bindings:
   - { key: NumpadEnter,             chars: "\n"                              }
   - { key: Slash,    mods: Control, chars: "\x1f"                            }
   - { key: Backslash,               chars: "\x5C"                            }
+  - { key: Space,    mods: Control, chars: "\x00"                            }
