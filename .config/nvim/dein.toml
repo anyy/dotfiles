@@ -427,3 +427,7 @@ repo  = 'dstein64/vim-startuptime'
 # EditorConfig
 [[plugins]]
 repo  = 'editorconfig/editorconfig-vim'
+
+# Highlighting
+[[plugins]]
+repo = 'RRethy/vim-illuminate'
