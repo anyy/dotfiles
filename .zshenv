@@ -32,3 +32,7 @@ export GIT_EDITOR="${EDITOR}"
 
 # LANG
 export LANG=ja_JP.UTF-8
+
+# fzf
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --iglob "!.git/*"'
+export FZF_FIND_FILE_COMMAND=$FZF_DEFAULT_COMMAND

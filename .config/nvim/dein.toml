@@ -232,13 +232,12 @@ hook_add = '''
     nmap <C-p> :Files<CR>
     command! -bang -nargs=? -complete=dir Files
       \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
     nmap <C-o> :Rg<CR>
     command! -bang -nargs=* Rg
       \ call fzf#vim#grep(
       \   'rg -uu --line-number --no-heading '.shellescape(<q-args>), 0,
       \   fzf#vim#with_preview({'options': '--exact --reverse --delimiter : --nth 3..'}, 'right:50%:wrap'))
-
-    let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --iglob "!.git/*"'
 '''
 
 # Syntax checking and semantic errors
