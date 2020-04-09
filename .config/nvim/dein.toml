@@ -343,6 +343,7 @@ hook_add = '''
 repo = 'ludovicchabant/vim-gutentags'
 hook_add = '''
   nmap <C-[> g<C-]>
+  let g:gutentags_ctags_tagfile = '.tags'
 '''
 [[plugins]]
 repo = 'universal-ctags/ctags'
@@ -448,5 +449,5 @@ repo = 'pechorin/any-jump.vim'
 hook_add = '''
   nmap <C-]> <leader>j
   let g:any_jump_list_numbers = 1
-  let g:any_jump_ignored_files = ['tags']
+  let g:any_jump_ignored_files = ['.tags']
 '''
