@@ -342,7 +342,7 @@ hook_add = '''
 [[plugins]]
 repo = 'ludovicchabant/vim-gutentags'
 hook_add = '''
-  nmap <C-]> g<C-]>
+  nmap <C-[> g<C-]>
 '''
 [[plugins]]
 repo = 'universal-ctags/ctags'
@@ -441,3 +441,12 @@ repo  = 'editorconfig/editorconfig-vim'
 # Highlighting
 [[plugins]]
 repo = 'RRethy/vim-illuminate'
+
+# Jump
+[[plugins]]
+repo = 'pechorin/any-jump.vim'
+hook_add = '''
+  nmap <C-]> <leader>j
+  let g:any_jump_list_numbers = 1
+  let g:any_jump_ignored_files = ['tags']
+'''
