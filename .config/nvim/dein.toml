@@ -74,6 +74,13 @@ hook_add = '''
 [[plugins]]
 repo  = 'buoto/gotests-vim'
 
+# Python
+[[plugins]]
+repo = 'tell-k/vim-autopep8'
+hook_add = '''
+  let g:autopep8_on_save = 1
+  let g:autopep8_disable_show_diff=1
+'''
 
 # Directory tree
 [[plugins]]
