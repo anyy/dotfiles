@@ -3,6 +3,7 @@
   "diagnostic.enable": false,
   "suggest.preferCompleteThanJumpPlaceholder":true,
   "coc.source.around.enable": false,
+  "python.jediEnabled": false,
   "languageserver":{
     "golang":{
       "command": "gopls",
