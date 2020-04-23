@@ -4,6 +4,7 @@
   "suggest.preferCompleteThanJumpPlaceholder":true,
   "coc.source.around.enable": false,
   "python.jediEnabled": false,
+  "python.autoComplete.addBrackets": true,
   "languageserver":{
     "golang":{
       "command": "gopls",
