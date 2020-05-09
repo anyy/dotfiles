@@ -457,3 +457,14 @@ hook_add = '''
   let g:any_jump_list_numbers = 1
   let g:any_jump_ignored_files = ['.tags']
 '''
+
+# preview markdown
+[[plugins]]
+repo  = 'iamcco/markdown-preview.nvim'
+on_ft = ['markdown', 'pandoc.markdown', 'rmd']
+build = 'sh -c "cd app & yarn install"'
+
+# TeX
+[[plugins]]
+repo  = 'iamcco/mathjax-support-for-mkdp'
+
