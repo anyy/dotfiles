@@ -89,6 +89,7 @@ hook_add = '''
   let g:NERDTreeDirArrows = 1
   let NERDTreeWinSize=45
   let g:NERDTreeLimitedSyntax = 1
+  let NERDTreeNaturalSort = 1
 '''
 [[plugins]]
 repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
