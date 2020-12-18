@@ -103,24 +103,10 @@ repo = 'Xuyuanp/nerdtree-git-plugin'
 # Color scheme
 [[plugins]]
 repo = 'joshdick/onedark.vim'
-[[plugins]]
-repo = 'dracula/vim'
-[[plugins]]
-repo = 'tyrannicaltoucan/vim-quantum'
-[[plugins]]
-repo = 'sheerun/vim-polyglot'
+# [[plugins]]
+# repo = 'sheerun/vim-polyglot'
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
-[[plugins]]
-repo = 'chriskempson/vim-tomorrow-theme'
-[[plugins]]
-repo = 'challenger-deep-theme/vim'
-[[plugins]]
-repo = 'rakr/vim-one'
-[[plugins]]
-repo = 'arcticicestudio/nord-vim'
-[[plugins]]
-repo = 'KeitaNakamura/neodark.vim'
 
 # Airline
 [[plugins]]

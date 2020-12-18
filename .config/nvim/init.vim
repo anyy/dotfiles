@@ -49,27 +49,7 @@ if dein#check_install()
 endif
 
 syntax on
-set background=dark
-" onedark
 colorscheme onedark
-
-" challenger-deep
-"colorscheme challenger_deep
-
-" tomorrow-theme
-"colorscheme Tomorrow-Night-Bright
-
-" dracula
-"colorscheme dracula
-
-" quantum
-" colorscheme quantum
-
-" nord-vim
-" colorscheme nord"
-
-" neodark
-" colorscheme neodark
 
 if (empty($TMUX))
   if (has("nvim"))
@@ -82,3 +62,6 @@ if (has("termguicolors"))
 endif
 
 hi illuminatedWord cterm=underline gui=underline
+
+" let g:python_host_prog = '/usr/bin/python'
+" let g:python3_host_prog = '/usr/bin/python3'
