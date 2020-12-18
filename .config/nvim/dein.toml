@@ -316,6 +316,9 @@ hook_add = '''
 # Snippet
 [[plugins]]
 repo = 'SirVer/ultisnips'
+hook_add = '''
+  let g:UltiSnipsExpandTrigger="<tab>"
+'''
 
 # Auto close parentheses
 [[plugins]]
